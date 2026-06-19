@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login</title>
+    <link rel="stylesheet" href="login.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+
+    <div class="login-container">
+        <div class="login-form-section">    
+            <div class="form-box">
+                <h2>Login</h2>
+                <p class="subtitle">
+                    Enter your credentials to access a world of travel opportunities, personalised itineraries, and exclusive deals.<br>
+                    <strong>Let's explore the world together!</strong>
+                </p>
+
+                <div class="input-group">
+                    <i class="fas fa-envelope"></i>
+                    <input type="text" id="username" placeholder="test@gmail.com">
+                </div>
+
+                <div class="input-group">
+                    <i class="fas fa-lock"></i>
+                    <input type="password" id="password" placeholder="Password">
+                </div>
+
+                <button class="btn-login" onclick="checkLogin()">Login Now</button>
+
+                <div class="error-box" id="error">
+                    <i class="fas fa-exclamation-triangle"></i> email or password invalid
+                </div>
+            </div>
+        </div>
+
+       <div class="image-section">
+
+            <img src="../photo/couple.jpg" class="avionp">
+            <img src="../Photo/avion.jpg" class="avion">
+        
+        
+        </div>
+    </div>
+
+    <script>
+        function checkLogin() {
+            var password = document.getElementById('password').value;
+            if (password !== '1234' && password !== 'abcd') {
+                document.getElementById('error').style.display = 'flex';
+            } else {
+                document.getElementById('error').style.display = 'none';
+                window.location.href = "index.html"; 
+            }
+        }
+    </script>
+</body>
+</html>  
